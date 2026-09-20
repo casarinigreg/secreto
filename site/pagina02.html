@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Seu melhor presente!!</title>
+</head>
+<body>
+    <div id="div_principal">
+        
+            <h1>Começando!!!</h1>
+            <div class="quest">
+            <label for="slc_quest1" id="quest1">Segunda pergunta! Aonde foi nosso primeiro encontro?</label>
+            <br>
+            <select id="slc_quest1">
+                <option value="#" disabled selected>Facinho também</option>
+                <option value="1">Liberdade</option>
+                <option value="2">Shopping Tucuruvi</option>
+                <option value="3">Horto florestal</option>                
+                <option value="4">Clube</option>
+            </select>
+            <button onclick="quest1()">Validar</button>
+            <div id="div_result"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function quest1() {
+        let resposta = slc_quest1.value;
+
+        if(resposta == 1) {
+            div_result.innerHTML=`Ta longe chuchu`
+        } else if(resposta == 2) {
+            div_result.innerHTML=`<a href="pagina03.html">BOA MEU AMOR!!!</a>
+            `
+        }else if(resposta == 3 || resposta == 4) {
+            div_result.innerHTML=`Essa ta longe também`
+        }
+    }
+</script>

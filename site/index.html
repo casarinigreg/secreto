@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Seu melhor presente!!</title>
+</head>
+<body>
+    <div id="div_principal">
+        
+            <h1>Começando!!!</h1>
+            <div class="quest">
+            <label for="slc_quest1" id="quest1">Primeira pergunta! Quando tudo começou?</label>
+            <br>
+            <select id="slc_quest1">
+                <option value="#" disabled selected>Essa é facil</option>
+                <option value="1">24/10</option>
+                <option value="2">25/09</option>
+                <option value="3">25/10</option>
+                <option value="4">15/09</option>
+            </select>
+            <button onclick="quest1()">Validar</button>
+            <div id="div_result"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function quest1() {
+        let resposta = slc_quest1.value;
+
+        if(resposta == 1) {
+            div_result.innerHTML=`Passou perto!!!`
+        } else if(resposta == 3) {
+            div_result.innerHTML=`ACERTOU!!<a href="pagina02.html">PRÓXIMO PASSO!!!</a>
+            `
+        }else if(resposta == 2 || resposta == 4) {
+            div_result.innerHTML=`Nossa amor ta longe eim`
+        }
+    }
+</script>
